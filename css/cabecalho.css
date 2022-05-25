@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/AvenirLTStd-Book.woff);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+
+/* ------------- header ------------- */
+#checkmenu {
+    visibility: hidden;
+}
+
+#frete_targe {
+    height: 38px;
+    width: 100vw;
+    background-color: #181818;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #a6a2a2;
+
+    position: fixed;
+    top: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#logo_raw {
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    margin: auto 0;
+}
+
+#p_carrinho {
+    font-family: 'Avenir', sans-serif;
+    font-size: 11px;
+    position: absolute;
+    right: 105px;
+    top: 31px;
+}
+
+#p_carrinho span {
+    display: inline-block;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    padding: 1px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+}
+
+#header {
+    display: flex;
+    width: 89vw;
+    height: 82px;
+    background-color: #fff;
+    position: fixed;
+    top: 38px;
+}
+
+#logo {
+    height: 49px;
+}
+
+#navmenu {
+    width: 400px;
+    height: 100vh;
+    background-color: #181818;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all .5s;
+}
+
+#navmenu ul {
+    position: relative;
+    top: 112px;
+    list-style: none;
+    text-align: center;
+    line-height: 40px;
+}
+
+#navmenu a {
+    text-decoration: none;
+    font-family: 'Avenir', sans-serif;
+    color: #fff;
+    font-size: 20px;
+}
+
+#navmenu a:hover {
+    color: #a6a2a2;
+}
+
+#close {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+}
+
+#menu {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+
+#checkmenu:checked~#navmenu {
+    right: -100vw;
+    transition: all .5s;
+}
